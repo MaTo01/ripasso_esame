@@ -1,0 +1,42 @@
+NOTAZIONE O GRANDE:
+
+"come rallenta il codice in base all'aumentare dei dati"
+
+1. Descrive la performance di un algoritmo in relazione all'aumentare dei dati
+2. Machine indipendent (N° di passaggi per il completamento)
+3. Ignora le operzioni più piccole (O(n+1) -> O(n))
+
+Esempi:    n = quantità di dati
+
+1) O(1)
+2) O(n)
+3) O(log n)
+4) O(n^2)
+
+*********************************************
+O(n) linear time                      O(1) constant time
+
+int addUp(int n){                 |   int addUp(int n){   
+    int sum = 0;                  |      int sum = n*(n+1)/2;
+    for(int i = 0; i<=n; i++){    |      return sum;
+        sum += i;                 |   }
+    }                             |   
+    return sum;                   |   
+}                                 |   
+                                  |
+n = 1000000                       |   n = 1000000
+impiega circa 1000000 passaggi    |   impiega 3 passaggi
+
+*********************************************
+
+O(1) = constant time:
+1. accesso randomico ad un elemento in un array
+2. inserimento di un elemento all'inizio di una linkedList
+
+O(log n) = logarithmic time
+1. ricerca binaria
+
+O(n) = linear time
+1. scorre in un array
+2. ricerca in una linkedList
+
